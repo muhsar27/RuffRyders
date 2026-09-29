@@ -1,0 +1,9 @@
+#!/bin/bash
+
+STAGED_GO_FILES=$(git diff --cached --name-only | grep ".go$")
+if [[ "$STAGED_GO_FILES" = "" ]]; then
+  echo "No go files were staged"
+  exit 0
+fi
+echo "found some interesting files"
+exit 1
