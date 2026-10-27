@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo "Commit message file: $1"
+echo "Commit message:"
+cat "$1"
+
